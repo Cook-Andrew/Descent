@@ -10,6 +10,10 @@
             grid-template-columns: auto auto auto auto;
             width: 10vw;
         }
+
+        div{
+            display: inline;
+        }
     </style>
 </head>
 
@@ -23,15 +27,16 @@
         <button onclick="human('Orc')">Orcish</button>
     </section></br>
     <section>
-        <span>Race: </span><div id="race"></div>
+        <span>Race: </span>
+        <div id="race"></div></br></br>
         <img src="img\Heart.png" alt="wounds"><span>:</span>
-        <div id="wounds"></div>
+        <div id="wounds"></div></br>
         <img src="img\Fatigue.png" alt="fatigue"><span>:</span>
-        <div id="fatigue"></div>
+        <div id="fatigue"></div></br>
         <span>Speed: </span>
-        <div id="speed"></div>
+        <div id="speed"></div></br>
         <span>Armor: </span>
-        <div id="armor"></div>
+        <div id="armor"></div></br>
     </section></br>
     <section class="container">
         <div>
@@ -143,43 +148,43 @@
         }
 
         function human(race) {
-            document.getElementById("race").innerHTML = race + "</br></br>";
-            document.getElementById("wounds").innerHTML = "12</br>";
-            document.getElementById("fatigue").innerHTML = "4</br>";
-            document.getElementById("speed").innerHTML = "4</br>";
-            document.getElementById("armor").innerHTML = "Grey</br>";
+            document.getElementById("race").innerHTML = race;
+            document.getElementById("wounds").innerHTML = "12";
+            document.getElementById("fatigue").innerHTML = "4";
+            document.getElementById("speed").innerHTML = "4";
+            document.getElementById("armor").innerHTML = "Grey";
         }
 
         function dwarven() {
-            document.getElementById("race").innerHTML = "Dwarf</br></br>";
-            document.getElementById("wounds").innerHTML = "8</br>";
-            document.getElementById("fatigue").innerHTML = "5</br>";
-            document.getElementById("speed").innerHTML = "3</br>";
-            document.getElementById("armor").innerHTML = "Black</br>";
+            document.getElementById("race").innerHTML = "Dwarf";
+            document.getElementById("wounds").innerHTML = "8";
+            document.getElementById("fatigue").innerHTML = "5";
+            document.getElementById("speed").innerHTML = "3";
+            document.getElementById("armor").innerHTML = "Black";
         }
 
         function elvish() {
-            document.getElementById("race").innerHTML = "Elf</br></br>";
-            document.getElementById("wounds").innerHTML = "8</br>";
-            document.getElementById("fatigue").innerHTML = "4</br>";
-            document.getElementById("speed").innerHTML = "5</br>";
-            document.getElementById("armor").innerHTML = "Grey</br>";
+            document.getElementById("race").innerHTML = "Elf";
+            document.getElementById("wounds").innerHTML = "8";
+            document.getElementById("fatigue").innerHTML = "4";
+            document.getElementById("speed").innerHTML = "5";
+            document.getElementById("armor").innerHTML = "Grey";
         }
 
         function bestial() {
-            document.getElementById("race").innerHTML = "Bestial</br></br>";
-            document.getElementById("wounds").innerHTML = "16</br>";
-            document.getElementById("fatigue").innerHTML = "4</br>";
-            document.getElementById("speed").innerHTML = "4</br>";
-            document.getElementById("armor").innerHTML = "Brown</br>";
+            document.getElementById("race").innerHTML = "Bestial";
+            document.getElementById("wounds").innerHTML = "16";
+            document.getElementById("fatigue").innerHTML = "4";
+            document.getElementById("speed").innerHTML = "4";
+            document.getElementById("armor").innerHTML = "Brown";
         }
 
         function nimble() {
-            document.getElementById("race").innerHTML = "Nimble</br></br>";
-            document.getElementById("wounds").innerHTML = "8</br>";
-            document.getElementById("fatigue").innerHTML = "5</br>";
-            document.getElementById("speed").innerHTML = "4</br>";
-            document.getElementById("armor").innerHTML = "Brown</br>";
+            document.getElementById("race").innerHTML = "Nimble";
+            document.getElementById("wounds").innerHTML = "8";
+            document.getElementById("fatigue").innerHTML = "5";
+            document.getElementById("speed").innerHTML = "4";
+            document.getElementById("armor").innerHTML = "Brown";
         }
     </script>
 </body>
