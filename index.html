@@ -14,10 +14,15 @@
         div {
             display: inline;
         }
-        img{
+
+        img {
             vertical-align: text-bottom;
         }
-        #might, #awareness, #willpower, #knowledge{
+
+        #might,
+        #awareness,
+        #willpower,
+        #knowledge {
             margin: 1em;
         }
     </style>
@@ -204,7 +209,7 @@
             window.print();
         }
 
-        function edit(){
+        function edit() {
             for (x in document.getElementsByTagName("button")) {
                 document.getElementById(x.toString()).style.display = "inline";
                 if (x == 14) {
