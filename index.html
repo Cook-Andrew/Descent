@@ -10,6 +10,7 @@
             grid-template-columns: auto auto auto auto;
             width: 10vw;
         }
+
         .twoCol {
             display: grid;
             grid-template-columns: auto auto auto auto;
@@ -210,18 +211,18 @@
         function printPage() {
             for (x in document.getElementsByTagName("button")) {
                 document.getElementById(x.toString()).style.display = "none";
-                if (x == 14) {
+                if (x == document.getElementsByTagName("button").length - 1) {
                     break;
                 }
             }
             window.print();
-            setTimeout(edit(),500);
+            setTimeout(edit(), 500);
         }
 
         function edit() {
             for (x in document.getElementsByTagName("button")) {
                 document.getElementById(x.toString()).style.display = "inline";
-                if (x == 14) {
+                if (x == document.getElementsByTagName("button").length - 1) {
                     break;
                 }
             }
