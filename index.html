@@ -5,10 +5,15 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-        .container {
+        .fourCol {
             display: grid;
             grid-template-columns: auto auto auto auto;
             width: 10vw;
+        }
+        .twoCol {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            width: 30vw;
         }
 
         div {
@@ -37,19 +42,22 @@
         <button onclick="nimble()" id="4">Nible</button>
         <button onclick="human('Orc')" id="5">Orcish</button>
     </section></br>
-    <section>
-        <span>Race: </span>
-        <div id="race"></div></br></br>
-        <img src="img\Heart.png" alt="wounds"><span>:</span>
-        <div id="wounds"></div></br>
-        <img src="img\Fatigue.png" alt="fatigue"><span>:</span>
-        <div id="fatigue"></div></br>
-        <span>Speed: </span>
-        <div id="speed"></div></br>
-        <span>Armor: </span>
-        <div id="armor"></div></br>
+    <section class="twoCol">
+        <div>
+            <span>Race: </span>
+            <div id="race"></div></br></br>
+            <img src="img\Heart.png" alt="wounds"><span>:</span>
+            <div id="wounds"></div></br>
+            <img src="img\Fatigue.png" alt="fatigue"><span>:</span>
+            <div id="fatigue"></div></br>
+            <span>Speed: </span>
+            <div id="speed"></div></br>
+            <span>Armor: </span>
+            <div id="armor"></div>
+        </div></br>
+        <div id="feat">The feat goes here.</div>
     </section></br>
-    <section class="container">
+    <section class="fourCol">
         <div>
             <button onclick="upM()" id="6">^</button></br>
             <img src="img\Might.png" alt="might">
