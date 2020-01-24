@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            width: 10vw;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button onclick="bestial()">Bestial</button>
+        <button onclick="dwarven()">Dwarven</button>
+        <button onclick="elvish()">Elvish</button>
+        <button onclick="human('Human')">Human</button>
+        <button onclick="nimble()">Nible</button>
+        <button onclick="human('Orc')">Orcish</button>
+    </section></br>
+    <section>
+        <span>Race: </span><div id="race"></div>
+        <img src="img\Heart.png" alt="wounds"><span>:</span>
+        <div id="wounds"></div>
+        <img src="img\Fatigue.png" alt="fatigue"><span>:</span>
+        <div id="fatigue"></div>
+        <span>Speed: </span>
+        <div id="speed"></div>
+        <span>Armor: </span>
+        <div id="armor"></div>
+    </section></br>
+    <section class="container">
+        <div>
+            <button onclick="upM()">^</button></br>
+            <img src="img\Might.png" alt="might">
+            <div id="might"></div>
+            <button onclick="downM()">v</button>
+        </div>
+
+        <div>
+            <button onclick="upW()">^</button></br>
+            <img src="img\Willpower.png" alt="willpower">
+            <div id="willpower"></div>
+            <button onclick="downW()">v</button>
+        </div>
+
+        <div>
+            <button onclick="upA()">^</button></br>
+            <img src="img\Awareness.png" alt="Awareness">
+            <div id="awareness"></div>
+            <button onclick="downA()">v</button>
+        </div>
+
+        <div>
+            <button onclick="upK()">^</button></br>
+            <img src="img\Knowledge.png" alt="knowledge">
+            <div id="knowledge"></div>
+            <button onclick="downK()">v</button>
+        </div>
+    </section>
+
+    <script>
+        var might = 1;
+        var willpower = 1;
+        var knowledge = 1;
+        var awareness = 1;
+        var pool = 7;
+
+        document.getElementById("might").innerHTML = might;
+
+        function upM() {
+            if (pool > 0) {
+                might++;
+                pool--;
+            }
+            document.getElementById("might").innerHTML = might;
+        }
+
+        function downM() {
+            if (might > 1) {
+                might--;
+                pool++;
+            }
+            document.getElementById("might").innerHTML = might;
+        }
+
+        document.getElementById("willpower").innerHTML = willpower;
+
+        function upW() {
+            if (pool > 0) {
+                willpower++;
+                pool--;
+            }
+            document.getElementById("willpower").innerHTML = willpower;
+        }
+
+        function downW() {
+            if (willpower > 1) {
+                willpower--;
+                pool++;
+            }
+            document.getElementById("willpower").innerHTML = willpower;
+        }
+
+        document.getElementById("awareness").innerHTML = awareness;
+
+        function upA() {
+            if (pool > 0) {
+                awareness++;
+                pool--;
+            }
+            document.getElementById("awareness").innerHTML = awareness;
+        }
+
+        function downA() {
+            if (awareness > 1) {
+                awareness--;
+                pool++;
+            }
+            document.getElementById("awareness").innerHTML = awareness;
+        }
+
+        document.getElementById("knowledge").innerHTML = knowledge;
+
+        function upK() {
+            if (pool > 0) {
+                knowledge++;
+                pool--;
+            }
+            document.getElementById("knowledge").innerHTML = knowledge;
+        }
+
+        function downK() {
+            if (knowledge > 1) {
+                knowledge--;
+                pool++;
+            }
+            document.getElementById("knowledge").innerHTML = knowledge;
+        }
+
+        function human(race) {
+            document.getElementById("race").innerHTML = race + "</br></br>";
+            document.getElementById("wounds").innerHTML = "12</br>";
+            document.getElementById("fatigue").innerHTML = "4</br>";
+            document.getElementById("speed").innerHTML = "4</br>";
+            document.getElementById("armor").innerHTML = "Grey</br>";
+        }
+
+        function dwarven() {
+            document.getElementById("race").innerHTML = "Dwarf</br></br>";
+            document.getElementById("wounds").innerHTML = "8</br>";
+            document.getElementById("fatigue").innerHTML = "5</br>";
+            document.getElementById("speed").innerHTML = "3</br>";
+            document.getElementById("armor").innerHTML = "Black</br>";
+        }
+
+        function elvish() {
+            document.getElementById("race").innerHTML = "Elf</br></br>";
+            document.getElementById("wounds").innerHTML = "8</br>";
+            document.getElementById("fatigue").innerHTML = "4</br>";
+            document.getElementById("speed").innerHTML = "5</br>";
+            document.getElementById("armor").innerHTML = "Grey</br>";
+        }
+
+        function bestial() {
+            document.getElementById("race").innerHTML = "Bestial</br></br>";
+            document.getElementById("wounds").innerHTML = "16</br>";
+            document.getElementById("fatigue").innerHTML = "4</br>";
+            document.getElementById("speed").innerHTML = "4</br>";
+            document.getElementById("armor").innerHTML = "Brown</br>";
+        }
+
+        function nimble() {
+            document.getElementById("race").innerHTML = "Nimble</br></br>";
+            document.getElementById("wounds").innerHTML = "8</br>";
+            document.getElementById("fatigue").innerHTML = "5</br>";
+            document.getElementById("speed").innerHTML = "4</br>";
+            document.getElementById("armor").innerHTML = "Brown</br>";
+        }
+    </script>
+</body>
+
+</html>
