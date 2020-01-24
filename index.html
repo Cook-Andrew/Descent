@@ -11,20 +11,26 @@
             width: 10vw;
         }
 
-        div{
+        div {
             display: inline;
+        }
+        img{
+            vertical-align: text-bottom;
+        }
+        #might, #awareness, #willpower, #knowledge{
+            margin: 1em;
         }
     </style>
 </head>
 
-<body>
+<body onclick="edit()">
     <section>
-        <button onclick="bestial()">Bestial</button>
-        <button onclick="dwarven()">Dwarven</button>
-        <button onclick="elvish()">Elvish</button>
-        <button onclick="human('Human')">Human</button>
-        <button onclick="nimble()">Nible</button>
-        <button onclick="human('Orc')">Orcish</button>
+        <button onclick="bestial()" id="0">Bestial</button>
+        <button onclick="dwarven()" id="1">Dwarven</button>
+        <button onclick="elvish()" id="2">Elvish</button>
+        <button onclick="human('Human')" id="3">Human</button>
+        <button onclick="nimble()" id="4">Nible</button>
+        <button onclick="human('Orc')" id="5">Orcish</button>
     </section></br>
     <section>
         <span>Race: </span>
@@ -40,33 +46,34 @@
     </section></br>
     <section class="container">
         <div>
-            <button onclick="upM()">^</button></br>
+            <button onclick="upM()" id="6">^</button></br>
             <img src="img\Might.png" alt="might">
             <div id="might"></div>
-            <button onclick="downM()">v</button>
+            <button onclick="downM()" id="7">v</button>
         </div>
 
         <div>
-            <button onclick="upW()">^</button></br>
+            <button onclick="upW()" id="8">^</button></br>
             <img src="img\Willpower.png" alt="willpower">
             <div id="willpower"></div>
-            <button onclick="downW()">v</button>
+            <button onclick="downW()" id="9">v</button>
         </div>
 
         <div>
-            <button onclick="upA()">^</button></br>
+            <button onclick="upA()" id="10">^</button></br>
             <img src="img\Awareness.png" alt="Awareness">
             <div id="awareness"></div>
-            <button onclick="downA()">v</button>
+            <button onclick="downA()" id="11">v</button>
         </div>
 
         <div>
-            <button onclick="upK()">^</button></br>
+            <button onclick="upK()" id="12">^</button></br>
             <img src="img\Knowledge.png" alt="knowledge">
             <div id="knowledge"></div>
-            <button onclick="downK()">v</button>
+            <button onclick="downK()" id="13">v</button>
         </div>
-    </section>
+    </section></br>
+    <button onclick="printPage()" id="14">Save</button>
 
     <script>
         var might = 1;
@@ -185,6 +192,25 @@
             document.getElementById("fatigue").innerHTML = "5";
             document.getElementById("speed").innerHTML = "4";
             document.getElementById("armor").innerHTML = "Brown";
+        }
+
+        function printPage() {
+            for (x in document.getElementsByTagName("button")) {
+                document.getElementById(x.toString()).style.display = "none";
+                if (x == 14) {
+                    break;
+                }
+            }
+            window.print();
+        }
+
+        function edit(){
+            for (x in document.getElementsByTagName("button")) {
+                document.getElementById(x.toString()).style.display = "inline";
+                if (x == 14) {
+                    break;
+                }
+            }
         }
     </script>
 </body>
