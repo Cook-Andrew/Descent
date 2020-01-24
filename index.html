@@ -5,6 +5,13 @@
     <meta charset="utf-8">
     <title></title>
     <style>
+        @font-face {
+            font-family: "Windlass";
+            src: url("Windlass.ttf");
+        }
+        span{
+            font-family: "Windlass";
+        }
         .fourCol {
             display: grid;
             grid-template-columns: auto auto auto auto;
@@ -35,12 +42,13 @@
 </head>
 
 <body>
+    <section><img src="img\title.png" alt="Descent 2e"></section>
     <section>
-        <button onclick="bestial()" id="0">Bestial</button>
+        <button onclick="beastial()" id="0">Beastial</button>
         <button onclick="dwarven()" id="1">Dwarven</button>
         <button onclick="elvish()" id="2">Elvish</button>
         <button onclick="human('Human')" id="3">Human</button>
-        <button onclick="nimble()" id="4">Nible</button>
+        <button onclick="nimble()" id="4">Nimble</button>
         <button onclick="human('Orc')" id="5">Orcish</button>
     </section></br>
     <section class="twoCol">
@@ -56,7 +64,7 @@
             <span>Armor: </span>
             <div id="armor"></div>
         </div></br>
-        <div id="feat">Feat: </div>
+        <div><span>Ability: </span><div id="ability"></div></div>
     </section></br>
     <section class="fourCol">
         <div>
@@ -94,6 +102,7 @@
         var willpower = 1;
         var knowledge = 1;
         var awareness = 1;
+        var bp = 0;
         var pool = 7;
 
         document.getElementById("might").innerHTML = might;
@@ -174,6 +183,7 @@
             document.getElementById("fatigue").innerHTML = "4";
             document.getElementById("speed").innerHTML = "4";
             document.getElementById("armor").innerHTML = "Grey";
+            bp = 12;
         }
 
         function dwarven() {
@@ -182,6 +192,7 @@
             document.getElementById("fatigue").innerHTML = "5";
             document.getElementById("speed").innerHTML = "3";
             document.getElementById("armor").innerHTML = "Black";
+            bp = 10;
         }
 
         function elvish() {
@@ -190,14 +201,16 @@
             document.getElementById("fatigue").innerHTML = "4";
             document.getElementById("speed").innerHTML = "5";
             document.getElementById("armor").innerHTML = "Grey";
+            bp = 10;
         }
 
-        function bestial() {
-            document.getElementById("race").innerHTML = "Bestial";
+        function beastial() {
+            document.getElementById("race").innerHTML = "Beastial";
             document.getElementById("wounds").innerHTML = "16";
             document.getElementById("fatigue").innerHTML = "4";
             document.getElementById("speed").innerHTML = "4";
             document.getElementById("armor").innerHTML = "Brown";
+            bp = 10;
         }
 
         function nimble() {
@@ -206,6 +219,7 @@
             document.getElementById("fatigue").innerHTML = "5";
             document.getElementById("speed").innerHTML = "4";
             document.getElementById("armor").innerHTML = "Brown";
+            bp = 15;
         }
 
         function printPage() {
