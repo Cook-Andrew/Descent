@@ -22,7 +22,8 @@
 
         .twoCol {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);;
+            grid-template-columns: repeat(3, 1fr);
+            ;
             width: 30vw;
         }
 
@@ -42,59 +43,66 @@
         }
 
         section {
-            margin-left: 1em;
+            padding-left: 1em;
+        }
+
+        .container {
+            padding:1em;
+            border: solid 2px black;
         }
     </style>
 </head>
 
 <body>
-    <img src="img\title.png" alt="Descent 2e">
-</br></br>
-    <section class="twoCol">
-        <div>
-            <span>Race: </span>
-            <div id="race"></div></br></br>
-            <img src="img\Heart.png" alt="wounds" onclick="upHeart()"><span>:</span>
-            <div id="wounds"></div></br>
-            <img src="img\Fatigue.png" alt="fatigue" onclick="upFatigue()"><span>:</span>
-            <div id="fatigue"></div></br>
-            <span onclick="upSpeed()">Speed: </span>
-            <div id="speed"></div></br>
-            <span onclick="upArmor()">Armor: </span>
-            <div id="armor"></div>
-        </div></br>
-        <div><span>Ability: </span>
-            <div id="ability"></div>
-        </div>
-    </section></br>
-    <section class="fourCol">
-        <div>
-            <button onclick="upM()" id="6">^</button></br>
-            <img src="img\Might.png" alt="might">
-            <div id="might"></div>
-            <button onclick="downM()" id="7">v</button>
-        </div>
+    <section class="container">
+        <img src="img\title.png" alt="Descent 2e">
+        </br></br>
+        <section class="twoCol">
+            <div>
+                <span>Race: </span>
+                <div id="race"></div></br></br>
+                <img src="img\Heart.png" alt="wounds" onclick="upHeart()"><span>:</span>
+                <div id="wounds"></div></br>
+                <img src="img\Fatigue.png" alt="fatigue" onclick="upFatigue()"><span>:</span>
+                <div id="fatigue"></div></br>
+                <span onclick="upSpeed()">Speed: </span>
+                <div id="speed"></div></br>
+                <span onclick="upArmor()">Armor: </span>
+                <div id="armor"></div>
+            </div></br>
+            <div><span>Ability: </span>
+                <div id="ability"></div>
+            </div>
+        </section></br>
+        <section class="fourCol">
+            <div>
+                <button onclick="upM()" id="6">^</button></br>
+                <img src="img\Might.png" alt="might">
+                <div id="might"></div>
+                <button onclick="downM()" id="7">v</button>
+            </div>
 
-        <div>
-            <button onclick="upW()" id="8">^</button></br>
-            <img src="img\Willpower.png" alt="willpower">
-            <div id="willpower"></div>
-            <button onclick="downW()" id="9">v</button>
-        </div>
+            <div>
+                <button onclick="upW()" id="8">^</button></br>
+                <img src="img\Willpower.png" alt="willpower">
+                <div id="willpower"></div>
+                <button onclick="downW()" id="9">v</button>
+            </div>
 
-        <div>
-            <button onclick="upA()" id="10">^</button></br>
-            <img src="img\Awareness.png" alt="Awareness">
-            <div id="awareness"></div>
-            <button onclick="downA()" id="11">v</button>
-        </div>
+            <div>
+                <button onclick="upA()" id="10">^</button></br>
+                <img src="img\Awareness.png" alt="Awareness">
+                <div id="awareness"></div>
+                <button onclick="downA()" id="11">v</button>
+            </div>
 
-        <div>
-            <button onclick="upK()" id="12">^</button></br>
-            <img src="img\Knowledge.png" alt="knowledge">
-            <div id="knowledge"></div>
-            <button onclick="downK()" id="13">v</button>
-        </div>
+            <div>
+                <button onclick="upK()" id="12">^</button></br>
+                <img src="img\Knowledge.png" alt="knowledge">
+                <div id="knowledge"></div>
+                <button onclick="downK()" id="13">v</button>
+            </div>
+        </section>
     </section></br>
     <section>
         <button onclick="beastial()" id="0">Beastial</button>
