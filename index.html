@@ -38,11 +38,14 @@
         #knowledge {
             margin: 1em;
         }
+        section{
+            margin-left: 1em;
+        }
     </style>
 </head>
 
 <body>
-    <section><img src="img\title.png" alt="Descent 2e"></section>
+    <img src="img\title.png" alt="Descent 2e">
     <section>
         <button onclick="beastial()" id="0">Beastial</button>
         <button onclick="dwarven()" id="1">Dwarven</button>
@@ -95,13 +98,14 @@
             <button onclick="downK()" id="13">v</button>
         </div>
     </section></br>
-    <button onclick="printPage()" id="14">Save</button>
+    <section><button onclick="printPage()" id="14">Save</button></section>
 
     <script>
         var might = 1;
         var willpower = 1;
         var knowledge = 1;
         var awareness = 1;
+        var trait = 4;
         var bp = 0;
         var pool = 7;
 
