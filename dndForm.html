@@ -7,14 +7,14 @@
 	 <body>
 	 <input type="text" id="booger" onchange="setField('booger')"></input>
 		<script>
-		function setField(key){
-alert(key);
-			var content = document.getElementById(key).value;
-			localStorage.setItem(key,content);
-		}
-		function pageLoad(){	
-			document.getElementById("booger").defaultValue = localStorage.getItem("booger");
-		}
+			function setField(key){
+				var content = document.getElementById(key).value;
+				localStorage.setItem(key,content);
+			}
+			function pageLoad(){	
+				document.getElementById("booger").defaultValue = localStorage.getItem("booger");
+			}
+			pageLoad();
 		</script>
 	 </body>
  </html>
