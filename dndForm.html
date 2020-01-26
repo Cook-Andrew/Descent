@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+	 <title>DnD form</title>
+	 <meta charset="UTF-8"/>
+ </head>
+	 <body>
+	 <input type="text" id="booger" onchange="setField('booger')"></input>
+	<script>
+		function setField(key){
+			var content = document.getElementById(key).value;
+			localStorage.setItem(key,content);
+		}
+		function pageLoad(){	
+			document.getElementById("booger").defaultValue = localStorage.getItem("booger");
+		}
+		</script>
+	 </body>
+ </html>
