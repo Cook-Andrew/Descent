@@ -10,9 +10,10 @@
 			function setField(key){
 				var content = document.getElementById(key).value;
 				localStorage.setItem(key,content);
+				location.reload();
 			}
 			function pageLoad(){	
-				document.getElementById("booger").defaultValue = localStorage.getItem("booger");
+				document.getElementById("booger").value = localStorage.getItem("booger");
 			}
 			pageLoad();
 		</script>
