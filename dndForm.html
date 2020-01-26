@@ -5,7 +5,8 @@
 	 <meta charset="UTF-8"/>
  </head>
 	 <body>
-	 <input type="text" id="booger" onchange="setField('booger')"></input>
+	 <input type="text" id="fOne" onchange="setField('fOne')"></input>
+	 <input type="text" id="fTwo" onchange="setField('fTwo')"></input>
 		<script>
 			function setField(key){
 				var content = document.getElementById(key).value;
@@ -13,7 +14,7 @@
 				location.reload();
 			}
 			function pageLoad(){	
-				document.getElementById("booger").value = localStorage.getItem("booger");
+				document.querySelectorAll('*[id]').value = localStorage.getItem('*[id]');
 			}
 			pageLoad();
 		</script>
